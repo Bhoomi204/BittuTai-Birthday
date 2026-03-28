@@ -1,0 +1,264 @@
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ :root {
+   --pink-bg: #FFC5E6;
+   --hot-pink: #F70D77;
+   --orange: #FF9809;
+   --white: #fff;
+ }
+
+ body {
+   background-color: var(--pink-bg);
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Nunito', sans-serif;
+   overflow-x: hidden;
+ }
+
+ /* Subtle confetti dots in background */
+ body::before {
+   content: '';
+   position: fixed;
+   inset: 0;
+   background-image:
+     radial-gradient(circle, #F70D77 1.5px, transparent 1.5px),
+     radial-gradient(circle, #FF9809 1.5px, transparent 1.5px),
+     radial-gradient(circle, #fff 1.5px, transparent 1.5px);
+   background-size: 60px 60px, 90px 90px, 75px 75px;
+   background-position: 0 0, 30px 30px, 15px 45px;
+   opacity: 0.18;
+   pointer-events: none;
+   z-index: 0;
+ }
+
+ .page {
+   position: relative;
+   z-index: 1;
+   text-align: center;
+   padding: 3rem 1.5rem 4rem;
+   max-width: 700px;
+   width: 100%;
+   animation: fadeUp 0.9s ease both;
+ }
+
+ @keyframes fadeUp {
+   from {
+     opacity: 0;
+     transform: translateY(32px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ h1 {
+   font-family: 'Boogaloo', cursive;
+   color: var(--hot-pink);
+   font-size: clamp(2.5rem, 6vw, 5rem);
+   line-height: 1.05;
+   letter-spacing: 0.02em;
+   margin-bottom: 0.6rem;
+   animation: fadeUp 0.9s 0.2s ease both;
+ }
+
+ h3 {
+   font-family: 'Nunito', sans-serif;
+   color: var(--orange);
+   font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+   font-weight: 600;
+   letter-spacing: 0.01em;
+   margin-bottom: 2.2rem;
+   animation: fadeUp 0.9s 0.35s ease both;
+ }
+
+ /* Cake image */
+ .photo-wrap {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 1.6rem;
+   animation: fadeUp 0.9s 0.45s ease both;
+ }
+
+ .cake-img {
+   width: clamp(180px, 48vw, 280px);
+   height: auto;
+   filter: drop-shadow(0 8px 24px rgba(247, 13, 119, 0.25));
+   transition: transform 0.3s ease;
+   cursor: pointer;
+ }
+
+ .cake-img:hover {
+   transform: scale(1.06) rotate(-2deg);
+ }
+
+ .cake-btn {
+   font-family: 'Nunito', sans-serif;
+   color: var(--orange);
+   font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+   font-weight: 600;
+   letter-spacing: 0.01em;
+   margin-bottom: 2.2rem;
+   animation: fadeUp 0.9s 0.35s ease both;
+ }
+
+ /* Cake button */
+ /* .cake-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--hot-pink);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      border: none;
+      border-radius: 999px;
+      padding: 0.75rem 2rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 16px rgba(247,13,119,0.3);
+      animation: fadeUp 0.9s 0.55s ease both;
+      text-decoration: none;
+    }
+ 
+    .cake-btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 8px 24px rgba(247,13,119,0.4);
+    }
+ 
+    .cake-btn:active {
+      transform: scale(0.97);
+    } */
+
+ /* .cake-icon {
+      font-size: 1.3em;
+    } */
+ .hero {
+   position: relative;
+   text-align: center;
+   padding: 80px 20px;
+ }
+
+ .side-img {
+   position: absolute;
+   width: 150px;
+   /* adjust size */
+ }
+
+ .left {
+   left: -15%;
+   top: 10%;
+   transform: translateX(-50%);
+   animation-delay: 0s;
+ }
+
+ .right {
+   right: -35%;
+   top: 10%;
+   transform: translateX(-50%);
+   animation-delay: 0.5s;
+ }
+
+ .cake {
+   width: 200px;
+   margin-top: 40px;
+ }
+@keyframes dance {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-5deg);
+  }
+
+  25% {
+    transform: translateX(-45%) translateY(-10px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(-5deg);
+  }
+
+  75% {
+    transform: translateX(-55%) translateY(-10px) rotate(5deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-5deg);
+  }
+}
+.side-img{
+  position: absolute;
+  width: 150px;
+  animation: dance 2s infinite ease-in-out;
+}
+ /* Message shown after clicking */
+ .message {
+   margin-top: 1.8rem;
+   font-family: 'Nunito', sans-serif;
+   font-size: clamp(1rem, 3vw, 1.3rem);
+   color: var(--hot-pink);
+   font-weight: 700;
+   opacity: 0;
+   transform: scale(0.8);
+   transition: opacity 0.4s ease, transform 0.4s ease;
+   min-height: 2rem;
+ }
+
+ .message.show {
+   opacity: 1;
+   transform: scale(1);
+ }
+
+ /* Responsive tweaks */
+ @media (max-width: 480px) {
+   .page {
+     padding: 2rem 1rem 3rem;
+   }
+ }
+
+ .balloon-container {
+   position: fixed;
+   bottom: -100px;
+   width: 100%;
+   pointer-events: none;
+ }
+
+ .balloon {
+   position: absolute;
+   width: 40px;
+   height: 50px;
+   background: red;
+   border-radius: 50%;
+   animation: floatUp 6s linear forwards;
+ }
+
+ .balloon::after {
+   content: "";
+   position: absolute;
+   width: 2px;
+   height: 40px;
+   background: #555;
+   left: 50%;
+   top: 50px;
+ }
+
+ @keyframes floatUp {
+   0% {
+     transform: translateY(0);
+     opacity: 1;
+   }
+
+   100% {
+     transform: translateY(-110vh);
+     opacity: 0;
+   }
+ }

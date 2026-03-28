@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 25th Birthday Bittu Tai! 🎂</title>
+
+    <!-- Google Fonts: Boogaloo for headings, Nunito for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="page">
+
+        <audio id="bgMusic" loop>
+            <!-- <source src="music.mp3" type="audio/mp3"> -->
+        </audio>
+
+        <!-- <div class="age-badge">✨ 25 Years of Amazingness ✨</div> -->
+
+        <h1>Happy Birthday<br>Bittu Tai!</h1>
+
+        <h3>For the most strong and hardworking person we know 💛</h3>
+
+        
+        <div class="photo-wrap">
+            <img src="left.png" class="side-img left">
+            <img src="img1.png" alt="Birthday Cake" class="cake-img" onclick="celebrate()">
+            <img src="right.png" class="side-img right">
+        </div>
+
+        <p class="cake-btn" onclick="celebrate()">
+            Hit the cake!
+        </p>
+
+        <p class="message" id="msg">🎉 Wishing you the happiest 25th Birthday! 🎉</p>
+
+    </div>
+    <div class="balloon-container"></div>
+
+    <script src="script.js"> </script>
+
+    <style>
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(105vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+    
+</body>
+
+</html>

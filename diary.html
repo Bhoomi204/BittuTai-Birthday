@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Diary</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #e3a9c3;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, #F70D77 1.5px, transparent 1.5px),
+                radial-gradient(circle, #FF9809 1.5px, transparent 1.5px),
+                radial-gradient(circle, #fff 1.5px, transparent 1.5px);
+            background-size: 60px 60px, 90px 90px, 75px 75px;
+            background-position: 0 0, 30px 30px, 15px 45px;
+            opacity: 0.18;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* grid layout */
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            padding: 70px;
+        }
+
+        /* cards */
+
+        .card {
+            height: 300px;
+            border-radius: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.35s ease;
+        }
+
+        /* hover animation */
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.04);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* colors */
+
+        .blue {
+            background: #6fa9ce;
+        }
+
+        .yellow {
+            background: #e6e89d;
+        }
+
+        /* title */
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* description */
+
+        .card-body {
+            font-size: 14px;
+        }
+
+        /* text colors */
+
+        .yellow-text {
+            color: #ffe875;
+        }
+
+        .pink-text {
+            color: #ff2a5f;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="cards-container">
+
+        <div class="card blue">
+            <div class="card-title yellow-text">The sofa castle</div>
+            <div class="card-body yellow-text">Definitely one of my core memories. I still remember, when mummy daddy
+                went outside, we made some crazy formations and enjoyed a lot in them... so much so that I even fell
+                from our "5 stored building" 😂 and I guess this was where we learnt how to act quick, because
+                everything was taken care of before they came back home😎</div>
+        </div>
+
+        <div class="card yellow">
+            <div class="card-title pink-text">Best kind of summers</div>
+            <div class="card-body pink-text">Home Minister who?😂😂 this was our training for the "khatro ke khiladi
+                tasks" that we would plan later in our life. The props we used, the games we designed, omg! it was pure
+                talent! Also, how can i forget the og balloon game. Our childhood summers were the best to say the
+                least. With Gungun tai coming over, the fun used
+                to get doubled. Without both of you training me, I wouldn't had mastered the art of "paani pichkari" and
+                the detective skills (which helped us a lot indeed). </div>
+        </div>
+
+        <div class="card blue">
+            <div class="card-title yellow-text">Ancient Memories</div>
+            <div class="card-body yellow-text">I know, we have some amazing memories that we shared, but being the
+                forgetful person I am, here's some that i remember: <br>1. Cycle ride and "Tongda futna"😭 <br>2. Shaina
+                Teacher calling you in my class😭😭 <br>3. Random dance choreo, of which you were the hidden
+                mastermind💃🏻 <br>4. Fashion designer and ghar ghar👠 <br>5. Eclair Delight✨</div>
+        </div>
+
+        <div class="card yellow">
+            <div class="card-title pink-text">Ultimate laughter</div>
+            <div class="card-body pink-text">"AEE dekho in logo ko, itni raat me khikhi kr rahe"😂😂 I couldn't even
+                remember when was the last time we laughed in late night. We used to laugh so carelessly that you had to
+                stop my laughing by pressing pillow on my face, now i know why people say that, "those were the days". I
+                miss laughing with you to the point that I forgot whatever thing worried me, how much those sessions
+                would help us in present we can just anticipate... hope we get our chance soon🥹 </div>
+        </div>
+
+        <div class="card yellow">
+            <div class="card-title pink-text">True Talent</div>
+            <div class="card-body pink-text">We were the perfect example of "if someone has passion of doing something,
+                nothing could stop them from doing it." Be it MAD, Art Attack or even FAQ, those were our inspiration. I
+                can infact remember how much raw materials we wasted for these stuffs. Do you remember our little
+                exibition in our flat? It was truely the example of "mainpulation" and how we encouraged art😂 among
+                peers. I can do anything, just to be in that time again when we painted those polaroids...😭</div>
+        </div>
+
+        <div class="card blue">
+            <div class="card-title yellow-text">Aesthetic movie night</div>
+            <div class="card-body yellow-text">Remember paneer tikka, Fairy lights and a not so interesting movie, or
+                late night chocolate shake, lays waffer style and pastry and geheraiyan? That is my idea of wating a
+                movie and still people ask me why dont you enjoy movies in theater. be it movies or insanely crazy
+                series we watched during lockdown, with you,eveything was interesting. We make a perfect team for
+                discussing conspiracy theories or movie plots.</div>
+        </div>
+
+        <div class="card yellow">
+            <div class="card-title pink-text">Covid terrace walks</div>
+            <div class="card-body pink-text">I remember asking you about what would it be like, after 10th or when i go
+                in clg or after youu finish your clg... who would have thought that those discussions that seemed too
+                far in the future, will be our reality today. Listening to Alan Walker's songs, discussing and gossiping
+                about what's going on in the house and even watching fireworks together, someone might misunderstand
+                this as a date plan, but i am happy that I got my chance to spend and amazing time with you during covid
+                before "saat samundar paar" became our reality. </div>
+        </div>
+
+        <div class="card blue">
+            <div class="card-title yellow-text">Japanese class</div>
+            <div class="card-body yellow-text">A long lost dream to study something together... and it was japanese. No
+                doubt, it is because of you that i got my interest in japanese. I will take my credit that you got your
+                certificate. But it was really hilarious, how we used to answer to all the TOSHADA's questions like a
+                team. It was also about the cup full of coffee to remember and my Great balancing skills😂 i think we
+                should do this more often; learning some skills together when we get old😂 </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
